@@ -27,7 +27,7 @@
           colors: {
             cream: {
               50: '#FAF8F5',
-              100: '#F4F0EA',
+              100: '#f3f2f0',
               200: '#EBE5DA',
               300: '#DFD5C3',
             },
@@ -44,7 +44,7 @@
 
   <style>
     body {
-      background-color: #edece9;
+      background-color: #f3f2f0;
       color: #111111;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
@@ -65,10 +65,10 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #F4F0EA;
+      background: #f3f2f0;
     }
     ::-webkit-scrollbar-thumb {
-      background: #ebeaea;
+      background: #f3f2f0;
       border-radius: 4px;
     }
 
@@ -84,6 +84,7 @@
       aspect-ratio: 1.5;
       margin-inline: auto;
       overflow: hidden;
+      mix-blend-mode:multiply
     }
 
     .hero-book {
@@ -109,7 +110,7 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased selection:bg-accent-yellow selection:text-black">
   <!-- NAVIGATION HEADER (Mirip Nook Style) -->
-  <header class="sticky top-0 z-40 bg-[#F4F0EA]/90 backdrop-blur-md border-b border-cream-200/60 transition-all">
+  <header class="sticky top-0 z-40 bg-[#f3f2f0]/90 backdrop-blur-md border-b border-cream-200/60 transition-all">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
       
       <!-- Logo & Brand -->
@@ -249,7 +250,7 @@
   </section>
 
   <!-- SECTION BAGIKAN KE KERABAT -->
-  <section class="py-12 px-6 lg:px-12 bg-[#F4F0EA]">
+  <section class="py-12 px-6 lg:px-12 bg-[#f3f2f0]">
     <div class="max-w-2xl mx-auto bg-amber-50/60 rounded-3xl p-6 sm:p-8 border border-amber-950/10 text-center shadow-sm">
       <h3 class="font-serif text-xl sm:text-2xl font-bold text-black mb-2">
         Bagikan Panduan Ini ke Kerabat
@@ -271,7 +272,7 @@
   </section>
 
   <!-- ABOUT SECTION -->
-  <section id="tentang" class="py-16 px-6 lg:px-12 bg-[#F4F0EA] border-t border-black/5">
+  <section id="tentang" class="py-16 px-6 lg:px-12 bg-[#f3f2f0] border-t border-black/5">
     <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 sm:p-12 border border-black/5 shadow-xl shadow-black/5 flex flex-col md:flex-row items-center gap-8">
       <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-cream-100 border border-black/10 flex items-center justify-center shrink-0 p-1">
         <img src="Logo/Library.png" alt="Library" class="w-full h-full object-cover">
@@ -291,7 +292,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-8 border-t border-black/10 bg-[#F4F0EA] text-center text-xs text-black/50">
+  <footer class="py-8 border-t border-black/10 bg-[#f3f2f0] text-center text-xs text-black/50">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p>© 2026 RuangSandar by Pricyllia. Hak Cipta Bebas — Silakan bagikan secara gratis.</p>
       <div class="flex items-center gap-4">
@@ -304,7 +305,7 @@
   <!-- MODAL PDF VIEWER -->
   <div id="pdfModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl w-full max-w-4xl h-[85vh] flex flex-col overflow-hidden shadow-2xl">
-      <div class="p-4 border-b border-black/10 flex items-center justify-between bg-[#F4F0EA]">
+      <div class="p-4 border-b border-black/10 flex items-center justify-between bg-[#f3f2f0]">
         <h3 id="pdfModalTitle" class="font-serif font-bold text-base text-black">Pratinjau Dokumen</h3>
         <button onclick="closePdf()" class="w-8 h-8 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-black">
           <i class="fa-solid fa-xmark"></i>
