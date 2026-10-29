@@ -44,7 +44,7 @@
 
   <style>
     body {
-      background-color: #F4F0EA;
+      background-color: #edece9;
       color: #111111;
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
@@ -98,7 +98,15 @@
     }
   </style>
 </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RuangSandar - Wadah Literasi & Aksi Mandiri</title>
 
+  <!-- TAMBAHKAN KODE INI UNTUK LOGO DI TAB BROWSER -->
+  <link rel="icon" type="image/png" href="Logo/Library.png">
+
+  <!-- (kode CSS / Tailwind Anda yang lain...) -->
+</head>
 <body class="min-h-screen flex flex-col justify-between antialiased selection:bg-accent-yellow selection:text-black">
   <!-- NAVIGATION HEADER (Mirip Nook Style) -->
   <header class="sticky top-0 z-40 bg-[#F4F0EA]/90 backdrop-blur-md border-b border-cream-200/60 transition-all">
@@ -133,14 +141,14 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="pt-16 pb-0 px-6 max-w-3xl mx-auto text-center relative overflow-hidden">
-    <h1 class="font-serif text-3xl sm:text-5xl md:text-5xl font-bold tracking-tight text-black leading-[1.15] mb-5">
+  <section class="pt-16 pb-0 px-6 max-w-5xl mx-auto text-center relative overflow-hidden">
+    <h1 class="font-serif text-3xl sm:text-5xl md:text-4xl font-bold tracking-tight text-black leading-[1.15] mb-6">
       Berhenti sejenak, temukan jawaban,<br>
       tumbuh bersama <span class="italic font-normal">RuangSandar</span>
     </h1>
 
-    <p class="text-black/60 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-      Akses modul praktis, panduan, dan referensi berdaya secara gratis tanpa syarat registrasi.
+    <p class="text-black/60 text-base sm:text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
+      Akses modul praktis, panduan, dan referensi mengatasi berbagai masalah secara gratis tanpa syarat registrasi.
     </p>
 
     <div class="max-w-xl mx-auto mb-0 relative z-20">
@@ -247,7 +255,7 @@
         Bagikan Panduan Ini ke Kerabat
       </h3>
       <p class="text-sm text-black/70 mb-6 leading-relaxed">
-        Ada teman, keluarga, atau kerabat yang membutuhkan panduan pemulihan diri atau keterampilan baru? Bantu mereka menemukan modul PDF gratis ini.
+        Ada teman, keluarga, atau kerabat yang membutuhkan panduan solusi berbagai masalah, pemulihan diri atau keterampilan baru? Bantu mereka menemukan modul PDF gratis ini.
       </p>
       <div class="flex flex-wrap justify-center gap-3">
         <button onclick="shareToWA()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white font-medium text-xs hover:opacity-90 transition shadow-sm">
@@ -271,8 +279,8 @@
       <div>
         <span class="text-xs font-bold uppercase tracking-widest text-accent-olive">Tentang Inisiatif</span>
         <h2 class="font-serif text-2xl sm:text-3xl font-bold text-black mt-1 mb-3">RuangSandar</h2>
-        <p class="text-sm text-black/70 leading-relaxed mb-4">
-          RuangSandar dihadirkan sebagai wadah literasi dan aksi mandiri. Setiap materi dirancang secara ringkas dan praktis agar siapapun dapat bangkit, belajar, serta berdaya menghadapi tantangan kehidupan.
+        <p class="text-sm text-black/70 leading-relaxed mb-4 text-justify">
+          RuangSandar dihadirkan sebagai wadah literasi dan aksi mandiri. Setiap materi dirancang secara ringkas dan praktis agar dapat membantu siapapun yang sedang membutuhkan pertolongan untuk bisa bangkit, belajar, serta menghadapi berbagai tantangan kehidupan.
         </p>
         <div class="flex items-center gap-2 text-xs font-semibold text-black/60">
           <i class="fa-solid fa-shield-halved text-accent-olive"></i>
@@ -285,7 +293,7 @@
   <!-- FOOTER -->
   <footer class="py-8 border-t border-black/10 bg-[#F4F0EA] text-center text-xs text-black/50">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 RuangSandar by Pricyllia Herfianty Putri. Hak Cipta Bebas — Silakan bagikan secara gratis.</p>
+      <p>© 2026 RuangSandar by Pricyllia. Hak Cipta Bebas — Silakan bagikan secara gratis.</p>
       <div class="flex items-center gap-4">
         <a href="#" class="hover:text-black transition-colors">Beranda</a>
         <a href="#pustaka" class="hover:text-black transition-colors">Pustaka</a>
