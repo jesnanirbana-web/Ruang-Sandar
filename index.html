@@ -80,13 +80,12 @@
     .hero-book-frame {
     position: relative;
     width: 100%;
-    max-width: 55rem; 
-    margin: 2rem auto 4rem auto;
+    max-width: 44rem; /* Ukuran lebar pas, tidak terlalu besar dan tidak kecil */
+    margin: -1.5rem auto -2.5rem auto; /* Jarak atas dan bawah yang rapat dan proporsional */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: visible;
-    perspective: 1000px; /* Memberikan ruang kedalaman (depth) untuk efek 3D */
 }
 
 .hero-book {
@@ -95,12 +94,8 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    
-    /* Mempertajam warna dan menambahkan bayangan 3D halus yang mengikuti bentuk buku */
-    filter: contrast(105%) brightness(102%) drop-shadow(0 25px 35px rgba(0, 0, 0, 0.15)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.05));
-    
-    /* Animasi transisi yang mulus */
-    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+    /* Efek bayangan halus 3D agar tampak nyata menyatu dengan latar belakang */
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
 }
 
 /* Sentuhan Mewah: Efek buku sedikit mengambang & condong 3D saat disorot mouse */
