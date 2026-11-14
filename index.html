@@ -78,29 +78,35 @@
     }
 
     .hero-book-frame {
-      position: relative;
-      width: 100%;
-      max-width: 70rem; /* Ukuran pas, tidak terlalu besar */
-      height: auto;
-      margin: 3rem auto 1rem auto;
-      display: flex;
-      justify-content:center;
-      align-items:center;
-      overflow: visible;
-    }
+    position: relative;
+    width: 100%;
+    max-width: 55rem; 
+    margin: 2rem auto 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    perspective: 1000px; /* Memberikan ruang kedalaman (depth) untuk efek 3D */
+}
 
-    .hero-book {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: auto;
-      /* Mengatur kemiringan landai ke kanan agar natural dan pas di tengah */
-      transform: translateY(-35%) rotate(0.5deg);
-      transform-origin: center center;
-      mix-blend-mode: normal;
-      filter: contrast(110%) brightness(102%);
+.hero-book {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    
+    /* Mempertajam warna dan menambahkan bayangan 3D halus yang mengikuti bentuk buku */
+    filter: contrast(105%) brightness(102%) drop-shadow(0 25px 35px rgba(0, 0, 0, 0.15)) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.05));
+    
+    /* Animasi transisi yang mulus */
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+}
+
+/* Sentuhan Mewah: Efek buku sedikit mengambang & condong 3D saat disorot mouse */
+.hero-book:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(2deg);
+    filter: contrast(105%) brightness(102%) drop-shadow(0 35px 45px rgba(0, 0, 0, 0.2)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
     }
   </style>
 </head>
