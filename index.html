@@ -80,11 +80,13 @@
     .hero-book-frame {
       position: relative;
       width: 100%;
-      max-width: 45rem;
-      aspect-ratio: 1.5;
-      margin-inline: auto;
-      overflow: hidden;
-      mix-blend-mode:multiply
+      max-width: 42rem; /* Ukuran pas, tidak terlalu besar */
+      height: 300px;
+      margin: 2rem auto -0rem auto;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      overflow: visible;
     }
 
     .hero-book {
@@ -94,8 +96,11 @@
       display: block;
       width: 100%;
       height: auto;
-      transform: translateY(calc(20px - 12%));
-      mix-blend-mode: multiply;
+      /* Mengatur kemiringan landai ke kanan agar natural dan pas di tengah */
+      transform: translateY(-35%) rotate(0.5deg);
+      transform-origin: center center;
+      mix-blend-mode: normal;
+      filter: contrast(110%) brightness(102%);
     }
   </style>
 </head>
