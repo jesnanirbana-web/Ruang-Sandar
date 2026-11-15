@@ -77,32 +77,46 @@
       filter: contrast(125%) brightness(96%) !important;
     }
 
-    .hero-book-frame {
+   .hero-book-frame {
     position: relative;
     width: 100%;
-    max-width: 72rem; /* Ukuran lebar pas, tidak terlalu besar dan tidak kecil */
-    margin: -10rem auto -6rem auto !important; /* Jarak atas dan bawah yang rapat dan proporsional */
+    max-width: 65rem; 
+    margin: -7rem auto -4rem auto !important; 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: visible;
+    z-index: 2;
 }
 
 .hero-book {
     position: relative;
     display: block;
-    width: 100%;
+    /* Ukuran khusus LAPTOP: Besar dan megah */
+    width: 52rem !important; 
+    max-width: none !important;
     height: auto;
     object-fit: contain;
-    /* Efek bayangan halus 3D agar tampak nyata menyatu dengan latar belakang */
-    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.13));
+    transform: scale(1.1) rotate(4deg) !important; 
+    transform-origin: center center;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.15));
 }
 
-/* Sentuhan Mewah: Efek buku sedikit mengambang & condong 3D saat disorot mouse */
-.hero-book:hover {
-    transform: translateY(-8px) scale(1.02) rotateX(6deg);
-    filter: contrast(105%) brightness(102%) drop-shadow(0 35px 45px rgba(0, 0, 0, 0.2)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+/* --- ATURAN KHUSUS UNTUK HP (Layar di bawah 768px) --- */
+@media screen and (max-width: 768px) {
+    .hero-book-frame {
+        max-width: 100% !important;
+        margin: -2rem auto -2rem auto !important; /* Jarak atas-bawah di HP agar tidak terlalu rapat/menabrak */
+        padding: 0 1rem;
     }
+
+    .hero-book {
+        /* Ukuran khusus HP: Dibuat pas, tidak terpotong, dan rapi di layar kecil */
+        width: 100% !important;
+        max-width: 32rem !important;
+        transform: scale(1) rotate(2deg) !important;
+    }
+}
   </style>
 </head>
   <meta charset="UTF-8">
