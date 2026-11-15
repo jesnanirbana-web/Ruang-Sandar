@@ -80,29 +80,55 @@
 .hero-book-frame {
     position: relative;
     width: 100%;
-    max-width: 60rem; /* Ukuran lebar pas, tidak terlalu besar dan tidak kecil */
-    margin: -7rem auto -5rem auto; /* Jarak atas dan bawah yang rapat dan proporsional */
+    max-width: 60rem; /* Ukuran lebar pas */
+    margin: -4rem auto -4.5rem auto; /* Jarak atas disesuaikan agar rapat pas di bawah search bar */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: visible;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 5;
+    pointer-events: none; /* Mencegah area transparan menghalangi klik pada search bar */
 }
 
 .hero-book {
     position: relative;
     display: block;
     width: 100%;
+    max-width: none;
     height: auto;
     object-fit: contain;
+    /* TAMBAHAN: Membuat background putih pada gambar buku menjadi transparan */
+    background: transparent !important;
+    mix-blend-mode: multiply !important;
     /* Efek bayangan halus 3D agar tampak nyata menyatu dengan latar belakang */
     filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.14));
+    transform-origin: center center;
 }
 
-/* Sentuhan Mewah: Efek buku sedikit mengambang & condong 3D saat disorot mouse */
+/* Sentuhan Mewah: Efek buku sedikit mengambang & condong 3D saat disorot mouse (Desktop) */
 .hero-book:hover {
     transform: translateY(-8px) scale(1.02) rotateX(4deg);
     filter: contrast(105%) brightness(102%) drop-shadow(0 35px 45px rgba(0, 0, 0, 0.2)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+}
+
+/* ==========================================================
+   TAMBAHAN KHUSUS HP (MOBILE VIEW) AGAR TIDAK BERUBAH/BERANTRAKAN
+   ========================================================== */
+@media screen and (max-width: 768px) {
+    .hero-book-frame {
+        max-width: 100% !important;
+        margin: -3.5rem auto -2.5rem auto !important;
+        padding: 0 1rem !important;
     }
+
+    .hero-book {
+        width: 140vw !important; /* Membuat buku meluber lebih lebar dari search bar di HP */
+        max-width: none !important;
+    }
+}
   </style>
 </head>
   <meta charset="UTF-8">
