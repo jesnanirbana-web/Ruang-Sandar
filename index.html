@@ -77,44 +77,70 @@
       filter: contrast(125%) brightness(96%) !important;
     }
 
-   .hero-book-frame {
-    position: relative;
-    width: 100%;
-    max-width: 65rem; 
-    margin: -7rem auto -4rem auto !important; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-    z-index: 2;
+   /* --- 1. TAMPILAN UTAMA (LAPTOP / DESKTOP) --- */
+.hero-section {
+    position: relative !important;
+    width: 100% !important;
+    /* Ruang kosong di bawah agar kartu putih "Katalog Referensi" berhenti pas di kaki buku */
+    padding-bottom: 34rem !important; 
+    overflow: hidden !important;
+}
+
+.hero-book-frame {
+    position: absolute !important;
+    /* Mengatur jarak persis dari atas agar bagian atas buku menempel dekat search bar */
+    top: 22rem !important; 
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 68rem !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 10 !important;
+    pointer-events: none; /* Agar area transparan gambar tidak menghalangi klik pada search bar */
 }
 
 .hero-book {
-    position: relative;
-    display: block;
-    /* Ukuran khusus LAPTOP: Besar dan megah */
-    width: 52rem !important; 
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
     max-width: none !important;
-    height: auto;
-    object-fit: contain;
-    transform: scale(1.1) rotate(4deg) !important; 
-    transform-origin: center center;
-    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.15));
+    height: auto !important;
+    object-fit: contain !important;
+    /* Ukuran besar dan sudut kemiringan sesuai referensi desktop */
+    transform: scale(1.15) rotate(3deg) !important;
+    transform-origin: center center !important;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.14)) !important;
 }
 
-/* --- ATURAN KHUSUS UNTUK HP (Layar di bawah 768px) --- */
+
+/* --- 2. TAMPILAN KHUSUS HP (MOBILE) --- */
 @media screen and (max-width: 768px) {
+    .hero-section {
+        position: relative !important;
+        padding-bottom: 22rem !important;
+    }
+
     .hero-book-frame {
+        position: absolute !important;
+        top: 21rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 100% !important;
         max-width: 100% !important;
-        margin: -5.5rem auto -2rem auto !important; /* Jarak atas-bawah di HP agar tidak terlalu rapat/menabrak */
-        padding: 0 0.2rem;
+        margin: 0 !important;
+        padding: 0 0.5rem !important;
+        z-index: 10 !important;
+        pointer-events: none;
     }
 
     .hero-book {
-        /* Ukuran khusus HP: Dibuat pas, tidak terpotong, dan rapi di layar kecil */
-        width: 100% !important;
-        max-width: 42rem !important;
-        transform: scale(1.15) rotate(4deg) !important;
+        width: 110vw !important;
+        max-width: none !important;
+        transform: scale(1) rotate(2deg) !important;
+        margin: 0 auto !important;
     }
 }
   </style>
