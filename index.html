@@ -86,19 +86,18 @@
     overflow: hidden !important;
 }
 
+/* --- 1. TAMPILAN LAPTOP / DESKTOP --- */
 .hero-book-frame {
-    position: absolute !important;
-    /* Mengatur jarak persis dari atas agar bagian atas buku menempel dekat search bar */
-    top: 22rem !important; 
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    position: relative !important;
     width: 100% !important;
-    max-width: 68rem !important;
-    margin: 0 !important;
+    max-width: 58rem !important;
+    /* Menarik buku naik tepat ke bawah search bar dan merapatkan kartu katalog putih */
+    margin: -4.5rem auto -5.5rem auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    z-index: 10 !important;
+    overflow: visible !important;
+    z-index: 5 !important;
     pointer-events: none; /* Agar area transparan gambar tidak menghalangi klik pada search bar */
 }
 
@@ -109,35 +108,28 @@
     max-width: none !important;
     height: auto !important;
     object-fit: contain !important;
-    /* Ukuran besar dan sudut kemiringan sesuai referensi desktop */
-    transform: scale(1.15) rotate(3deg) !important;
+    /* Skala dan kemiringan persis seperti referensi desktop */
+    transform: scale(1.16) rotate(3deg) !important;
     transform-origin: center center !important;
     filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.14)) !important;
 }
 
-
-/* --- 2. TAMPILAN KHUSUS HP (MOBILE) --- */
+/* --- 2. TAMPILAN HP / MOBILE --- */
 @media screen and (max-width: 768px) {
-    .hero-section {
-        position: relative !important;
-        padding-bottom: 22rem !important;
-    }
-
     .hero-book-frame {
-        position: absolute !important;
-        top: 21rem !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
+        position: relative !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 0.5rem !important;
-        z-index: 10 !important;
-        pointer-events: none;
+        /* Tarik margin atas agar bukunya naik rapat ke bawah search bar di HP */
+        margin: -3.2rem auto -3.8rem auto !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        z-index: 5 !important;
     }
 
     .hero-book {
-        width: 110vw !important;
+        /* Memaksa ukuran buku melebar (118vw) sehingga area transparan pinggir terpotong & objek buku tampil besar */
+        width: 118vw !important;
         max-width: none !important;
         transform: scale(1) rotate(2deg) !important;
         margin: 0 auto !important;
