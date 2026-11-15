@@ -77,21 +77,41 @@
       filter: contrast(125%) brightness(96%) !important;
     }
 
- /* --- 1. BUKU HERO (LAPTOP / DESKTOP) --- */
+/* ==========================================================
+   KODE PRESISI HERO & BUKU (SAMA PERSIS DENGAN REFERENSI)
+   ========================================================== */
+
+/* 1. Pengaturan Container Utama */
+.hero-section {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* 2. Bingkai Buku (Desktop & Mobile Responsive) */
 .hero-book-frame {
     position: relative !important;
     width: 100% !important;
-    max-width: 68rem !important;
-    /* Jarak atas dan bawah agar buku menempel rapat ke search bar dan katalog */
-    margin: -3.5rem auto -4rem auto !important;
+    max-width: 65rem !important;
+    /* Menarik buku naik rapat tepat di bawah search bar dan merapatkan jarak ke katalog */
+    margin: -3.5rem auto -4.5rem auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
     overflow: visible !important;
-    z-index: 2 !important;
+    z-index: 5 !important;
     pointer-events: none; /* Mencegah area transparan menutupi klik search bar */
 }
 
+/* 3. Gambar Buku (Transparan tanpa kotak putih & efek 3D melayang) */
 .hero-book {
     position: relative !important;
     display: block !important;
@@ -99,35 +119,38 @@
     max-width: none !important;
     height: auto !important;
     object-fit: contain !important;
-    /* Ukuran besar dan sudut tegak natural sesuai referensi */
-    transform: scale(1.15) rotate(0deg) !important;
+    
+    /* Trik ampuh menghilangkan background putih padat pada gambar */
+    mix-blend-mode: multiply !important; 
+    background: transparent !important;
+    
+    /* Ukuran besar, megah, dan posisi tegak natural sesuai contoh acuan */
+    transform: scale(1.18) rotate(0deg) !important;
     transform-origin: center center !important;
-    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12)) !important;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.14)) !important;
 }
 
 
-/* --- BUKU HERO KHUSUS HP (MOBILE) --- */
+/* ==========================================================
+   PENGATURAN KHUSUS HP (MOBILE VIEW)
+   ========================================================== */
 @media screen and (max-width: 768px) {
     .hero-book-frame {
-        position: relative !important;
-        width: 100% !important;
         max-width: 100% !important;
-        /* Tarik naik dengan margin negatif yang sangat besar (-7.5rem) agar celah kosong hilang */
-        margin: -7.5rem auto -2rem auto !important;
-        padding: 0 !important;
-        overflow: visible !important;
-        z-index: 2 !important;
+        /* Tarik naik dengan presisi agar di HP posisinya menempel pas di bawah search bar */
+        margin: -3.8rem auto -2.5rem auto !important;
+        padding: 0 0.5rem !important;
     }
 
-    /* Perbesar lebar buku hingga 155vw agar jauh lebih lebar dari search bar */
+    /* Di HP, buat ukuran buku meluber lebih lebar dari search bar (145vw) */
     .hero-book {
-        width: 155vw !important;
+        width: 145vw !important;
         max-width: none !important;
-        transform: scale(1.15) rotate(0deg) !important;
-        margin: 0 auto !important;
+        transform: scale(1.12) rotate(0deg) !important;
+        filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.12)) !important;
     }
 }
-</style>
+  </style>
 </head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
