@@ -106,28 +106,28 @@
 }
 
 
-/* --- 2. BUKU HERO KHUSUS HP (MOBILE) --- */
+/* --- BUKU HERO KHUSUS HP (MOBILE) --- */
 @media screen and (max-width: 768px) {
     .hero-book-frame {
         position: relative !important;
         width: 100% !important;
         max-width: 100% !important;
-        /* Tarik margin atas (-2.5rem) agar naik rapat menempel ke bawah search bar di HP */
-        margin: -2.5rem auto -2.8rem auto !important;
+        /* Tarik naik dengan margin negatif yang sangat besar (-7.5rem) agar celah kosong hilang */
+        margin: -7.5rem auto -2rem auto !important;
         padding: 0 !important;
         overflow: visible !important;
         z-index: 2 !important;
     }
 
-    /* Buku dibuat lebih lebar dari search bar (135vw) agar tampil besar dan megah */
+    /* Perbesar lebar buku hingga 155vw agar jauh lebih lebar dari search bar */
     .hero-book {
-        width: 135vw !important;
+        width: 155vw !important;
         max-width: none !important;
-        transform: scale(1.1) rotate(0deg) !important;
+        transform: scale(1.15) rotate(0deg) !important;
         margin: 0 auto !important;
     }
 }
-  </style>
+</style>
 </head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
