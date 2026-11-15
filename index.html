@@ -77,14 +77,24 @@
       filter: contrast(125%) brightness(96%) !important;
     }
 
-/* --- BUKU HERO: BESAR & MELUBER TANPA MEMOTONG BAWAH --- */
+/* ==========================================================
+   KODE UTAMA: LAPTOP & DESKTOP
+   ========================================================== */
+.hero-section {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
 
-/* 1. Desktop / Laptop */
 .hero-book-frame {
     position: relative !important;
     width: 100% !important;
-    max-width: 70rem !important;
-    margin: -3rem auto -3.5rem auto !important;
+    max-width: 68rem !important;
+    margin: -3.5rem auto -4rem auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -106,24 +116,38 @@
     object-fit: contain !important;
     background: transparent !important;
     mix-blend-mode: multiply !important;
-    transform: scale(1.2) rotate(0deg) !important;
+    transform: scale(1.18) rotate(0deg) !important;
     transform-origin: center center !important;
     filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.14)) !important;
 }
 
 
-/* 2. Khusus HP (Mobile) - Aman, Rapat ke Search Bar, Katalog Utuh */
+/* ==========================================================
+   PENYELARASAN TAMPILAN HP AGAR PERSIS SEPERTI LAPTOP
+   ========================================================== */
 @media screen and (max-width: 768px) {
     .hero-section {
-        overflow-x: clip !important; /* Mencegah layar geser samping tapi menjaga elemen bawah tetap utuh */
-        padding-bottom: 2rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: clip !important;
     }
 
+    /* Menyamakan proporsi search bar agar struktur atasnya simetris dengan laptop */
+    .search-container, 
+    .search-bar, 
+    form[class*="search"], 
+    div[class*="search"] {
+        width: 90% !important;
+        max-width: 40rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Bingkai buku diselaraskan agar jarak atas dan bawahnya proporsional */
     .hero-book-frame {
         width: 100% !important;
         max-width: 100% !important;
-        /* Jarak atas pas di bawah search bar, jarak bawah normal agar katalog tidak kepotong */
-        margin: -4rem auto -1.5rem auto !important;
+        margin: -3.8rem auto -3rem auto !important;
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
@@ -132,14 +156,14 @@
         z-index: 5 !important;
     }
 
-    /* Buku dibuat besar meluber dari search bar, tapi diatur agar tidak merusak section bawah */
+    /* Ukuran buku disesuaikan proporsinya agar megah meluber tapi tetap seimbang di layar kecil */
     .hero-book {
-        width: 150vw !important;
+        width: 140vw !important;
         max-width: none !important;
         background: transparent !important;
         mix-blend-mode: multiply !important;
-        transform: scale(1.1) rotate(0deg) !important;
-        filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12)) !important;
+        transform: scale(1.12) rotate(0deg) !important;
+        filter: drop-shadow(0 18px 25px rgba(0, 0, 0, 0.12)) !important;
         margin: 0 auto !important;
     }
 }
