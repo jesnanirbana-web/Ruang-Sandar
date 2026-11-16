@@ -106,11 +106,21 @@
 /* ==========================================================
    PENGATURAN KHUSUS HP DENGAN MARGIN PILIHANMU
    ========================================================== 
-    */@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
     .hero-book-frame {
         margin: 2rem auto -8rem auto !important;
         overflow: visible !important;
     }
+
+    .hero-book {
+        background: transparent !important;
+        mix-blend-mode: multiply !important;
+        
+        /* Ubah angka 1.25 di bawah ini sesuai selera (misal: 1.3 atau 1.4 untuk lebih besar) */
+        transform: scale(1.25) !important; 
+        transform-origin: center center !important;
+    }
+}
 }
   </style>
 </head>
