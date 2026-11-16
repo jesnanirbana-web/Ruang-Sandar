@@ -103,6 +103,35 @@
       mix-blend-mode: normal;
       filter: contrast(110%) brightness(102%);
     }
+    /* Bingkai pembungkus untuk ruang 3D */
+.hero-book-frame {
+    perspective: 1200px !important; /* Memberi kedalaman ruang 3D */
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent; /* Menghilangkan kotak biru saat diklik di HP */
+}
+
+/* Tampilan default buku dengan efek 3D ringan & bayangan realistis */
+.hero-book {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                filter 0.4s ease !important;
+    
+    /* Bayangan yang mengikuti bentuk lekukan asli buku */
+    filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.18)) !important;
+    
+    /* Kemiringan 3D halus */
+    transform: rotateX(6deg) rotateY(-4deg) scale(1) !important;
+    will-change: transform, filter;
+}
+
+/* Efek saat kursor diarahkan (Laptop) atau saat buku diklik/ditahan (HP & Laptop) */
+.hero-book-frame:hover .hero-book,
+.hero-book-frame.active-zoom .hero-book {
+    /* Buku tegak lurus, maju ke depan, dan membesar */
+    transform: rotateX(0deg) rotateY(0deg) translateY(-10px) scale(1.18) !important;
+    
+    /* Bayangan melebar dan melunak karena buku seolah terangkat lebih tinggi */
+    filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.28)) !important;
+}
     /* ... seluruh kode CSS desktop kamu di bagian atas ... */
 
 @media screen and (max-width: 768px) {
