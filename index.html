@@ -91,8 +91,8 @@
     .hero-book-frame {
       position: relative;
       width: 100%;
-      max-width: 36.5rem; /* Ukuran lebih proporsional & pas dengan lebar search bar sesuai referensi */
-      margin: 1.5rem auto 1rem auto;
+      max-width: 44rem; /* Ukuran lebih proporsional & pas dengan lebar search bar sesuai referensi */
+      margin: 1.75rem auto 1rem auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -100,7 +100,7 @@
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .hero-book-frame:hover {
-      transform: translateY(-4px) scale(1.02);
+      transform: translateY(-4px) scale(1.015);
     }
 
     .hero-book {
@@ -110,7 +110,7 @@
       height: auto;
       object-fit: contain;
       transform: rotate(0deg);
-      filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.12));
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
       image-rendering: -webkit-optimize-contrast;
       user-select: none;
       -webkit-user-drag: none;
@@ -118,11 +118,11 @@
 
     @media screen and (max-width: 768px) {
       .hero-book-frame {
-        max-width: 88%;
-        margin: 1rem auto 0.5rem auto;
+        max-width: 94%;
+        margin: 1.25rem auto 0.75rem auto;
       }
       .hero-book {
-        filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.10));
+        filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.10));
       }
     }
   </style>
