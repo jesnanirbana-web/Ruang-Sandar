@@ -81,13 +81,13 @@
     .hero-book-frame {
       position: relative;
       width: 100%;
-      max-width: 72rem !important; /* Ukuran pas, tidak terlalu besar */
-      height: 300px !important;
-      margin: 2rem auto -0rem auto !important;
-      display: flex !important;
-      justify-content:center !important;
-      align-items:center !important;
-      overflow: visible !important;
+      max-width: 72rem; /* Ukuran pas, tidak terlalu besar */
+      height: 300px;
+      margin: 2rem auto -0rem auto;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      overflow: visible;
     }
 
     .hero-book {
@@ -103,6 +103,28 @@
       mix-blend-mode: normal;
       filter: contrast(110%) brightness(102%);
     }
+    /* Sentuhan Mewah: Efek buku sedikit mengambang & condong 3D saat disorot mouse (Desktop) */
+.hero-book:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(4deg);
+    filter: contrast(105%) brightness(102%) drop-shadow(0 35px 45px rgba(0, 0, 0, 0.2)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+}
+
+/* ==========================================================
+   TAMBAHAN KHUSUS HP (MOBILE VIEW) AGAR TIDAK BERUBAH/BERANTRAKAN
+   ========================================================== */
+@media screen and (max-width: 768px) {
+    .hero-book-frame {
+        max-width: 100% !important;
+        margin: -3.5rem auto -2.5rem auto !important;
+        padding: 0 1rem !important;
+    }
+
+    .hero-book {
+        width: 140vw !important; /* Membuat buku meluber lebih lebar dari search bar di HP */
+        max-width: none !important;
+    }
+}
+    
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between antialiased selection:bg-accent-yellow selection:text-black">
