@@ -73,57 +73,35 @@
       border-radius: 4px;
     }
 
-    .no-box-book {
+      .no-box-book {
       mix-blend-mode: multiply !important;
       filter: contrast(125%) brightness(96%) !important;
-    }
-    /* ==========================================================
-       HERO & BUKU PRESISI SESUAI REFERENSI LANDING PAGE
-       ========================================================== */
-    .hero-section {
-      position: relative;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .hero-book-frame {
       position: relative;
       width: 100%;
-      max-width: 44rem; /* Ukuran lebih proporsional & pas dengan lebar search bar sesuai referensi */
-      margin: 1.75rem auto 1rem auto;
+      max-width: 42rem; /* Ukuran pas, tidak terlalu besar */
+      height: 300px;
+      margin: 2rem auto -0rem auto;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 10;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .hero-book-frame:hover {
-      transform: translateY(-4px) scale(1.015);
+      justify-content:center;
+      align-items:center;
+      overflow: visible;
     }
 
     .hero-book {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
       display: block;
       width: 100%;
       height: auto;
-      object-fit: contain;
-      transform: rotate(0deg);
-      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
-      image-rendering: -webkit-optimize-contrast;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    @media screen and (max-width: 768px) {
-      .hero-book-frame {
-        max-width: 94%;
-        margin: 1.25rem auto 0.75rem auto;
-      }
-      .hero-book {
-        filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.10));
-      }
+      /* Mengatur kemiringan landai ke kanan agar natural dan pas di tengah */
+      transform: translateY(-35%) rotate(0.5deg);
+      transform-origin: center center;
+      mix-blend-mode: normal;
+      filter: contrast(110%) brightness(102%);
     }
   </style>
 </head>
