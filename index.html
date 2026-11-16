@@ -106,19 +106,27 @@
 /* ==========================================================
    PENGATURAN KHUSUS HP DENGAN MARGIN PILIHANMU
    ========================================================== 
-    @media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
     .hero-book-frame {
-        margin: 2rem auto -8rem auto !important;
+        /* Mengatur jarak pas di bawah search bar dan menarik ke atas katalog */
+        margin: -1rem auto -7.5rem auto !important;
         overflow: visible !important;
+        padding: 0 !important;
     }
 
     .hero-book {
-        background: transparent !important;
-        mix-blend-mode: multiply !important;
+        /* Memperbesar ukuran buku agar terlihat megah dan jelas di HP */
+        width: 140% !important;
+        max-width: none !important;
+        margin-left: -20% !important; /* Agar posisi gambarnya tetap simetris di tengah */
         
-        /* Ubah angka 1.25 di bawah ini sesuai selera (misal: 1.3 atau 1.4 untuk lebih besar) */
-        transform: scale(1.25) !important; 
-        transform-origin: center center !important;
+        /* Mematikan multiply agar tulisan tajam sempurna dan tidak pecah */
+        mix-blend-mode: normal !important;
+        background: transparent !important;
+        
+        /* Memaksa browser HP merender garis teks dengan ketajaman maksimal */
+        image-rendering: -webkit-optimize-contrast !important;
+    }
 }
   </style>
 </head>
